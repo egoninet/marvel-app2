@@ -7,7 +7,7 @@ import CharacterDetailPage from './CharacterDetailPage';
 jest.mock('react-router', () => ({
     useLoaderData: jest.fn(),
 }));
- 
+
 describe('CharacterDetailPage', () => {
     const character = {
         name: 'Thor',
@@ -28,19 +28,25 @@ describe('CharacterDetailPage', () => {
         useLoaderData.mockReturnValue(character);
     });
 
-    test('render CharacterDetailPage component', () => {
+    test('renders CharacterDetailPage component', () => {
         render(<CharacterDetailPage />);
+        
+        // Verifies that the page title is correct
         expect(document.title).toBe('Thor | Marvel App');
 
+        // Verifies that the character's name is displayed
         const nameElement = screen.getByText(character.name);
         expect(nameElement).toBeInTheDocument();
 
+        // Verifies that the character's description is displayed
         const descriptionElement = screen.getByText(character.description);
         expect(descriptionElement).toBeInTheDocument();
 
+        // Verifies that the modified date is displayed
         const modifiedElement = screen.getByText(character.modified);
         expect(modifiedElement).toBeInTheDocument();
 
+        // Verifies that the character's image is displayed with the correct path
         const imageElement = screen.getByAltText(character.name);
         expect(imageElement).toBeInTheDocument();
         expect(imageElement).toHaveAttribute('src', 'path/to/image/standard_large.jpg');

@@ -1,14 +1,14 @@
+// CharacterDetailPage.jsx
 import React, { useEffect } from 'react';
-
 import { useLoaderData } from 'react-router';
 import CharacterDetail from '../components/CharacterDetail';
 
 const CharacterDetailPage = () => {
-    // retrieve the character using the useLoaderData hook
+    // Retrieve the character using the useLoaderData hook
     const character = useLoaderData();
 
     useEffect(() => {
-        document.title = `${character.name} | Marvel App`;
+        document.title = `${character.name} | Marvel App`; // Update the document title
     }, [character]);
 
     return (

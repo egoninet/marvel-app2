@@ -2,34 +2,72 @@
 <testExecutions version="1">
   <file path="C:\Users\egoninet.PEDA\Documents\Girard\src\api\characters-api.test.js">
     <testCase name="getCharacters should return the list of characters" duration="8"/>
-    <testCase name="getCharacterById should return the correct character when a valid ID is provided" duration="1"/>
-    <testCase name="getCharacterById should throw an error when an invalid ID is provided" duration="8"/>
+    <testCase name="getCharacterById should return the character with the given id" duration="1"/>
+    <testCase name="getCharacterById should throw an error if the character with the given id is not found" duration="8"/>
   </file>
   <file path="C:\Users\egoninet.PEDA\Documents\Girard\src\components\NumberOfCharacters.test.jsx">
-    <testCase name="renders &quot;There is no character&quot; when characters array is empty" duration="36"/>
-    <testCase name="renders the correct number of characters when characters array is not empty" duration="2"/>
-    <testCase name="renders &quot;There is no character&quot; when no characters are provided" duration="4"/>
-  </file>
-  <file path="C:\Users\egoninet.PEDA\Documents\Girard\src\components\CharacterDetail.test.jsx">
-    <testCase name="CharacterDetail component renders character image, description and modification date" duration="42"/>
-    <testCase name="CharacterDetail component renders default description when no description is available" duration="5"/>
-    <testCase name="CharacterDetail component renders default modification date when no modification date is available" duration="4"/>
+    <testCase name="renders &quot;There is no character&quot; when characters array is empty" duration="24"/>
+    <testCase name="renders the correct number of characters when characters array is not empty" duration="3"/>
+    <testCase name="renders &quot;There is no character&quot; when no characters are provided" duration="2"/>
   </file>
   <file path="C:\Users\egoninet.PEDA\Documents\Girard\src\pages\CharacterDetailPage.test.jsx">
-    <testCase name="CharacterDetailPage renders character details correctly" duration="41"/>
-  </file>
-  <file path="C:\Users\egoninet.PEDA\Documents\Girard\src\pages\AboutPage.test.jsx">
-    <testCase name="render AboutPage component" duration="63"/>
+    <testCase name="CharacterDetailPage render CharacterDetailPage component" duration="30"/>
   </file>
   <file path="C:\Users\egoninet.PEDA\Documents\Girard\src\pages\ContactPage.test.jsx">
-    <testCase name="render ContactPage component" duration="82"/>
+    <testCase name="ContactPage sets the document title correctly" duration="64"/>
+  </file>
+  <file path="C:\Users\egoninet.PEDA\Documents\Girard\src\components\CharacterDetail.test.jsx">
+    <testCase name="renders the character detail correctly" duration="34"/>
+    <testCase name="does not render the character thumbnail image when not provided" duration="4"/>
+    <testCase name="renders &quot;no character&quot; when character is not provided" duration="3"/>
+  </file>
+  <file path="C:\Users\egoninet.PEDA\Documents\Girard\src\pages\AboutPage.test.jsx">
+    <testCase name="AboutPage sets the document title correctly" duration="67"/>
   </file>
   <file path="C:\Users\egoninet.PEDA\Documents\Girard\src\components\CharactersList.test.jsx">
-    <testCase name="CharactersList component renders the correct number of characters and a link for each character" duration="82"/>
-    <testCase name="CharactersList component renders an empty list when no characters are provided" duration="3"/>
-    <testCase name="CharactersList component renders when nothing is provided" duration="3"/>
+    <testCase name="renders an empty list when no characters are provided" duration="53"/>
+    <testCase name="renders an empty list when characters is empty" duration="5"/>
+    <testCase name="renders the correct number of list items when characters are provided" duration="13"/>
   </file>
   <file path="C:\Users\egoninet.PEDA\Documents\Girard\src\pages\CharactersPage.test.jsx">
-    <testCase name="render CharactersPage component" duration="79"/>
+    <testCase name="CharacterDetailPage renders CharacterDetailPage component" duration="29"/>
+    <testCase name="CharactersPage render CharactersPage component" duration="35">
+      <failure message="Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it&apos;s defined in, or you might have mixed up default and named imports."><![CDATA[Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `BrowserRouter`.
+    at createFiberFromTypeAndProps (C:\Users\egoninet.PEDA\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:28478:17)
+    at createFiberFromElement (C:\Users\egoninet.PEDA\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:28504:15)
+    at reconcileSingleElement (C:\Users\egoninet.PEDA\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:13986:23)
+    at reconcileChildFibers (C:\Users\egoninet.PEDA\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:14044:35)
+    at reconcileChildren (C:\Users\egoninet.PEDA\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:19186:28)
+    at mountIndeterminateComponent (C:\Users\egoninet.PEDA\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:20186:5)
+    at beginWork (C:\Users\egoninet.PEDA\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:21626:16)
+    at beginWork$1 (C:\Users\egoninet.PEDA\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:27465:14)
+    at performUnitOfWork (C:\Users\egoninet.PEDA\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:26599:12)
+    at workLoopSync (C:\Users\egoninet.PEDA\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:26505:5)
+    at renderRootSync (C:\Users\egoninet.PEDA\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:26473:7)
+    at recoverFromConcurrentError (C:\Users\egoninet.PEDA\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:25889:20)
+    at performConcurrentWorkOnRoot (C:\Users\egoninet.PEDA\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:25789:22)
+    at flushActQueue (C:\Users\egoninet.PEDA\Documents\Girard\node_modules\react\cjs\react.development.js:2667:24)
+    at act (C:\Users\egoninet.PEDA\Documents\Girard\node_modules\react\cjs\react.development.js:2582:11)
+    at C:\Users\egoninet.PEDA\Documents\Girard\node_modules\@testing-library\react\dist\act-compat.js:47:25
+    at renderRoot (C:\Users\egoninet.PEDA\Documents\Girard\node_modules\@testing-library\react\dist\pure.js:180:26)
+    at render (C:\Users\egoninet.PEDA\Documents\Girard\node_modules\@testing-library\react\dist\pure.js:271:10)
+    at Object.<anonymous> (C:\Users\egoninet.PEDA\Documents\Girard\src\pages\CharactersPage.test.jsx:29:15)
+    at Promise.then.completed (C:\Users\egoninet.PEDA\Documents\Girard\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (C:\Users\egoninet.PEDA\Documents\Girard\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\egoninet.PEDA\Documents\Girard\node_modules\jest-circus\build\run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at _runTest (C:\Users\egoninet.PEDA\Documents\Girard\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (C:\Users\egoninet.PEDA\Documents\Girard\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\egoninet.PEDA\Documents\Girard\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\egoninet.PEDA\Documents\Girard\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\egoninet.PEDA\Documents\Girard\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\egoninet.PEDA\Documents\Girard\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\egoninet.PEDA\Documents\Girard\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\egoninet.PEDA\Documents\Girard\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\egoninet.PEDA\Documents\Girard\node_modules\jest-runner\build\testWorker.js:106:12)]]></failure>
+    </testCase>
   </file>
 </testExecutions>
