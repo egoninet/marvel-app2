@@ -1,29 +1,48 @@
-// Cette façon de faire fonctionne, mais elle n'est pas optimale. Elle mélange la récupération des données et l'affichage des composants.
-// react_router nous permet de faire mieux en utilisant des hooks pour récupérer les données avant d'afficher le composant et ainsi de séparer récupération des données et affichage.
-// Adapter le code pour utiliser react_router et les hooks comme dans l'exemple du guide, grâce aux concepts de loader et useLoaderData . On appelera directement la fonction getCharacters dans le loader (pas de fonction fetch ).
-import { NumberOfCharacters } from '../components/NumberOfCharacters'; // Chemin d'accès pour l'importation
+import '@testing-library/jest-dom';
+import { render, screen } from '@testing-library/react';
+import { useLoaderData } from 'react-router';
+import CharacterDetailPage from './CharacterDetailPage';
 
-import { useLoaderData } from "react-router-dom";
-import React, { useEffect } from 'react';
+// Mock the useLoaderData hook
+jest.mock('react-router', () => ({
+    useLoaderData: jest.fn(),
+}));
+ 
+describe('CharacterDetailPage', () => {
+    const character = {
+        name: 'Thor',
+        description: 'God of Thunder',
+        modified: '2023-10-01',
+        thumbnail: { path: 'path/to/image', extension: 'jpg' },
+        capacities: {
+            force: 5,
+            intelligence: 8,
+            durability: 6,
+            energy: 6,
+            speed: 1,
+            fighting: 3
+        }
+    };
 
-export default function CharactersPage() {
-    const characters = useLoaderData(); // Assurez-vous que cette fonction soit importée correctement
-    // Utilisé pour changer le titre de la page
-    useEffect(() => {
-        document.title = "Marvel App"; // Modification du titre de la page
-    }, []);
+    beforeEach(() => {
+        useLoaderData.mockReturnValue(character);
+    });
 
-    return (
-        <div>
-            <h2>Marvel Characters</h2>
-            <ul>
-                {characters.map(character => (
-                    <li key={character.id}>
-                        <a href={`/character/${character.id}`}>{character.name}</a>
-                    </li>
-                ))}
-            </ul>
-            <NumberOfCharacters characters={characters} />
-        </div>
-    );
-}
+    test('render CharacterDetailPage component', () => {
+        render(<CharacterDetailPage />);
+        expect(document.title).toBe('Thor | Marvel App');
+
+        const nameElement = screen.getByText(character.name);
+        expect(nameElement).toBeInTheDocument();
+
+        const descriptionElement = screen.getByText(character.description);
+        expect(descriptionElement).toBeInTheDocument();
+
+        const modifiedElement = screen.getByText(character.modified);
+        expect(modifiedElement).toBeInTheDocument();
+
+        const imageElement = screen.getByAltText(character.name);
+        expect(imageElement).toBeInTheDocument();
+        expect(imageElement).toHaveAttribute('src', 'path/to/image/standard_large.jpg');
+    });
+});
