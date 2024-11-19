@@ -1,9 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="C:\Users\egoninet.PEDA\Documents\Girard\src\pages\CharacterDetailPage.test.jsx">
-    <testCase name="CharacterDetailPage render CharacterDetailPage component" duration="32"/>
-  </file>
-  <file path="C:\Users\egoninet.PEDA\Documents\Girard\src\pages\CharactersPage.test.jsx">
-    <testCase name="CharactersPage render CharactersPage component" duration="56"/>
-  </file>
 </testExecutions>
