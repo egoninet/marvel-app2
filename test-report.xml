@@ -1,50 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="C:\Users\egoninet\Documents\Girard\src\components\chart-utils.test.js">
-    <testCase name="prepareData should return an empty array when no data is provided" duration="9"/>
-    <testCase name="prepareData should return the correct transformed data when all values are provided" duration="0"/>
-    <testCase name="prepareData should filter out elements with undefined values" duration="0"/>
-    <testCase name="prepareData should handle partial data correctly" duration="1"/>
-  </file>
   <file path="C:\Users\egoninet\Documents\Girard\src\api\characters-api.test.js">
-    <testCase name="characters-api getCharacters should return the list of characters with default order" duration="20"/>
+    <testCase name="characters-api getCharacters should return the list of characters with default order" duration="18"/>
     <testCase name="characters-api getCharacters should return the list of characters ordered by name ascending" duration="1"/>
-    <testCase name="characters-api getCharacters should return the list of characters ordered by name descending" duration="0"/>
+    <testCase name="characters-api getCharacters should return the list of characters ordered by name descending" duration="1"/>
     <testCase name="characters-api getCharacters should return the list of characters ordered by modified field ascending" duration="0"/>
     <testCase name="characters-api getCharacters should return the list of characters ordered by modified field descending" duration="1"/>
-    <testCase name="characters-api getCharacterById should return the character with the given id" duration="1"/>
-    <testCase name="characters-api getCharacterById should throw an error if the character with the given id is not found" duration="14"/>
+    <testCase name="characters-api getCharacterById should return the character with the given id" duration="0"/>
+    <testCase name="characters-api getCharacterById should throw an error if the character with the given id is not found" duration="10"/>
   </file>
-  <file path="C:\Users\egoninet\Documents\Girard\src\components\NumberOfCharacters.test.jsx">
-    <testCase name="NumberOfCharacters renders &quot;There is no character&quot; when no characters are provided" duration="26"/>
-    <testCase name="NumberOfCharacters renders &quot;There is no character&quot; when characters array is empty" duration="2"/>
-    <testCase name="NumberOfCharacters renders the correct number of characters when characters array is not empty" duration="3"/>
-    <testCase name="NumberOfCharacters renders &quot;There is 1 character&quot; when characters array has only one character" duration="2"/>
+  <file path="C:\Users\egoninet\Documents\Girard\src\components\chart-utils.test.js">
+    <testCase name="prepareData should return an empty array when no data is provided" duration="11"/>
+    <testCase name="prepareData should return the correct transformed data when all values are provided" duration="1"/>
+    <testCase name="prepareData should filter out elements with undefined values" duration="1"/>
+    <testCase name="prepareData should handle partial data correctly" duration="1"/>
   </file>
   <file path="C:\Users\egoninet\Documents\Girard\src\components\CharacterDetail.test.jsx">
-    <testCase name="renders the character detail correctly" duration="31"/>
-    <testCase name="does not render the character thumbnail image when not provided" duration="3"/>
+    <testCase name="renders the character detail correctly" duration="43"/>
+    <testCase name="does not render the character thumbnail image when not provided" duration="4"/>
     <testCase name="renders &quot;no character&quot; when character is not provided" duration="3"/>
   </file>
-  <file path="C:\Users\egoninet\Documents\Girard\src\pages\AboutPage.test.jsx">
-    <testCase name="AboutPage sets the document title correctly" duration="62"/>
-  </file>
-  <file path="C:\Users\egoninet\Documents\Girard\src\pages\ContactPage.test.jsx">
-    <testCase name="ContactPage sets the document title correctly" duration="67"/>
-  </file>
-  <file path="C:\Users\egoninet\Documents\Girard\src\Layout.test.jsx">
-    <testCase name="renders the layout with correct elements" duration="87"/>
+  <file path="C:\Users\egoninet\Documents\Girard\src\components\NumberOfCharacters.test.jsx">
+    <testCase name="NumberOfCharacters renders &quot;There is no character&quot; when no characters are provided" duration="35"/>
+    <testCase name="NumberOfCharacters renders &quot;There is no character&quot; when characters array is empty" duration="4"/>
+    <testCase name="NumberOfCharacters renders the correct number of characters when characters array is not empty" duration="4"/>
+    <testCase name="NumberOfCharacters renders &quot;There is 1 character&quot; when characters array has only one character" duration="3"/>
   </file>
   <file path="C:\Users\egoninet\Documents\Girard\src\pages\CharacterDetailPage.test.jsx">
+    <testCase name="CharacterDetailPage render CharacterDetailPage component" duration="45"/>
+  </file>
+  <file path="C:\Users\egoninet\Documents\Girard\src\pages\AboutPage.test.jsx">
+    <testCase name="AboutPage sets the document title correctly" duration="70"/>
+  </file>
+  <file path="C:\Users\egoninet\Documents\Girard\src\pages\ContactPage.test.jsx">
+    <testCase name="ContactPage sets the document title correctly" duration="58"/>
   </file>
   <file path="C:\Users\egoninet\Documents\Girard\src\components\CharactersList.test.jsx">
-    <testCase name="renders an empty list when no characters are provided" duration="86"/>
-    <testCase name="renders an empty list when characters is empty" duration="7"/>
+    <testCase name="renders an empty list when no characters are provided" duration="63"/>
+    <testCase name="renders an empty list when characters is empty" duration="6"/>
     <testCase name="renders the correct number of list items when characters are provided" duration="15"/>
   </file>
+  <file path="C:\Users\egoninet\Documents\Girard\src\Layout.test.jsx">
+    <testCase name="renders the layout with correct elements" duration="80"/>
+  </file>
   <file path="C:\Users\egoninet\Documents\Girard\src\pages\CharactersPage.test.jsx">
-    <testCase name="CharactersPage render CharactersPage component" duration="87"/>
-    <testCase name="CharactersPage render CharactersPage component with order and orderBy from search params" duration="27"/>
-    <testCase name="CharactersPage render CharactersPage component with order and orderBy when the select changes" duration="20"/>
+    <testCase name="CharactersPage render CharactersPage component" duration="69"/>
+    <testCase name="CharactersPage render CharactersPage component with order and orderBy from search params" duration="23"/>
+    <testCase name="CharactersPage render CharactersPage component with order and orderBy when the select changes" duration="13"/>
   </file>
 </testExecutions>
