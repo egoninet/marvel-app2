@@ -7,6 +7,12 @@
         "thumbnail": {
             "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/80/511a79a0451a3",
             "extension": "jpg"
+        },
+        "capacities": {
+            "intelligence": 90,
+            "strength": 80,
+            "speed": 50,
+            "endurance": 70
         }
     },
     {
@@ -17,6 +23,12 @@
         "thumbnail": {
             "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/50/537ba56d31087",
             "extension": "jpg"
+        },
+        "capacities": {
+            "intelligence": 70,
+            "strength": 85,
+            "speed": 70,
+            "endurance": 90
         }
     },
     {
@@ -26,6 +38,12 @@
         "thumbnail": {
             "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/90/5261a86cacb99",
             "extension": "jpg"
+        },
+        "capacities": {
+            "intelligence": 65,
+            "strength": 70,
+            "speed": 80,
+            "endurance": 85
         }
     },
     {
@@ -36,6 +54,12 @@
         "thumbnail": {
             "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/10/526033c8b474a",
             "extension": "jpg"
+        },
+        "capacities": {
+            "intelligence": 40,
+            "strength": 95,
+            "speed": 30,
+            "endurance": 100
         }
     },
     {
@@ -46,6 +70,12 @@
         "thumbnail": {
             "path": "http://i.annihil.us/u/prod/marvel/i/mg/5/a0/538615ca33ab0",
             "extension": "jpg"
+        },
+        "capacities": {
+            "intelligence": 80,
+            "strength": 100,
+            "speed": 60,
+            "endurance": 90
         }
     },
     {
@@ -56,6 +86,12 @@
         "thumbnail": {
             "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/c0/527bb7b37ff55",
             "extension": "jpg"
+        },
+        "capacities": {
+            "intelligence": 95,
+            "strength": 70,
+            "speed": 60,
+            "endurance": 80
         }
     },
     {
@@ -64,8 +100,14 @@
         "description": "A genetically-engineered alien with a knack for big guns and fast ships, Rocket serves as the backbone of the Guardians of the Galaxy!",
         "modified": "2014-07-17T17:32:43-0400",
         "thumbnail": {
-          "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/b0/50fec1e49298a",
-          "extension": "jpg"
+            "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/b0/50fec1e49298a",
+            "extension": "jpg"
+        },
+        "capacities": {
+            "intelligence": 85,
+            "strength": 40,
+            "speed": 70,
+            "endurance": 60
         }
     },
     {
@@ -74,8 +116,14 @@
         "description": "When Zenn-La was threatened by the world-devouring entity known as Galactus, Norrin Radd stood up for his home planet and offered to work for Galactus, finding him new planets to eat, in exchange for saving his own. Years later, the Surfer has protected Earth and many other planets, becoming one of the greatest heroes in the universe.",
         "modified": "2013-11-07T10:48:53-0500",
         "thumbnail": {
-          "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/50/527bb6490a176",
-          "extension": "jpg"
+            "path": "http://i.annihil.us/u/prod/marvel/i/mg/3/50/527bb6490a176",
+            "extension": "jpg"
+        },
+        "capacities": {
+            "intelligence": 75,
+            "strength": 85,
+            "speed": 90,
+            "endurance": 80
         }
     },
     {
@@ -85,6 +133,12 @@
         "thumbnail": {
             "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/40/5274137e3e2cd",
             "extension": "jpg"
+        },
+        "capacities": {
+            "intelligence": 95,
+            "strength": 100,
+            "speed": 50,
+            "endurance": 100
         }
     },
     {
@@ -94,6 +148,12 @@
         "thumbnail": {
             "path": "http://i.annihil.us/u/prod/marvel/i/mg/d/d0/5269657a74350",
             "extension": "jpg"
+        },
+        "capacities": {
+            "intelligence": 65,
+            "strength": 95,
+            "speed": 80,
+            "endurance": 90
         }
     },
     {
@@ -103,6 +163,12 @@
         "thumbnail": {
             "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/60/537bcaef0f6cf",
             "extension": "jpg"
+        },
+        "capacities": {
+            "intelligence": 70,
+            "strength": 85,
+            "speed": 65,
+            "endurance": 95
         }
     }
 ]
