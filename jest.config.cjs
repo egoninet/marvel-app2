@@ -13,8 +13,6 @@ module.exports = {
     "!src/main.jsx",
     // Exclude App.jsx from coverage
     "!src/App.jsx", 
-    // Exclude Layout.jsx from coverage
-    "!src/Layout.jsx", 
     // Exclude routes.jsx from coverage
     "!src/routes.jsx",
   ],
