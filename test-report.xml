@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="C:\Users\egoninet\Documents\Girard\src\Layout.test.jsx">
-    <testCase name="renders the layout with correct elements" duration="96"/>
+  <file path="C:\Users\egoninet\Documents\Girard\e2e-tests\marvel.spec.js">
   </file>
 </testExecutions>
