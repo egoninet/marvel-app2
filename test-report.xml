@@ -1,57 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="C:\Users\egoninet\Documents\Girard\src\api\characters-api.test.js">
-    <testCase name="characters-api getCharacters should return the list of characters with default order" duration="14"/>
-    <testCase name="characters-api getCharacters should return the list of characters ordered by name ascending" duration="0"/>
-    <testCase name="characters-api getCharacters should return the list of characters ordered by name descending" duration="0"/>
-    <testCase name="characters-api getCharacters should return the list of characters ordered by modified field ascending" duration="0"/>
-    <testCase name="characters-api getCharacters should return the list of characters ordered by modified field descending" duration="0"/>
-    <testCase name="characters-api getCharacterById should return the character with the given id" duration="1"/>
-    <testCase name="characters-api getCharacterById should throw an error if the character with the given id is not found" duration="4"/>
-  </file>
-  <file path="C:\Users\egoninet\Documents\Girard\src\pages\CharacterDetailPage.test.jsx">
-  </file>
-  <file path="C:\Users\egoninet\Documents\Girard\src\pages\CharactersPage.test.jsx">
-    <testCase name="CharactersPage render CharactersPage component" duration="67"/>
-    <testCase name="CharactersPage render CharactersPage component with order and orderBy from search params" duration="23"/>
-    <testCase name="CharactersPage render CharactersPage component with order and orderBy when the select changes" duration="13"/>
-  </file>
-  <file path="C:\Users\egoninet\Documents\Girard\src\components\RechartsPieChart.test.jsx">
-    <testCase name="RechartsPieChart renders the pie chart with correct data" duration="53">
-      <failure message="TypeError: expect(...).toBeInTheDocument is not a function"><![CDATA[TypeError: expect(...).toBeInTheDocument is not a function
-    at Object.toBeInTheDocument (C:\Users\egoninet\Documents\Girard\src\components\RechartsPieChart.test.jsx:23:61)
-    at Promise.then.completed (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\utils.js:298:28)
-    at new Promise (<anonymous>)
-    at callAsyncCircusFn (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\utils.js:231:10)
-    at _callCircusTest (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:316:40)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at _runTest (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:252:3)
-    at _runTestsForDescribeBlock (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:126:9)
-    at _runTestsForDescribeBlock (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:121:9)
-    at run (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:71:3)
-    at runAndTransformResultsToJestFormat (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
-    at jestAdapter (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
-    at runTestInternal (C:\Users\egoninet\Documents\Girard\node_modules\jest-runner\build\runTest.js:367:16)
-    at runTest (C:\Users\egoninet\Documents\Girard\node_modules\jest-runner\build\runTest.js:444:34)
-    at Object.worker (C:\Users\egoninet\Documents\Girard\node_modules\jest-runner\build\testWorker.js:106:12)]]></failure>
-    </testCase>
-    <testCase name="RechartsPieChart  don&apos;t fail when data is null" duration="5">
-      <failure message="TypeError: expect(...).toBeInTheDocument is not a function"><![CDATA[TypeError: expect(...).toBeInTheDocument is not a function
-    at Object.toBeInTheDocument (C:\Users\egoninet\Documents\Girard\src\components\RechartsPieChart.test.jsx:34:61)
-    at Promise.then.completed (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\utils.js:298:28)
-    at new Promise (<anonymous>)
-    at callAsyncCircusFn (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\utils.js:231:10)
-    at _callCircusTest (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:316:40)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at _runTest (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:252:3)
-    at _runTestsForDescribeBlock (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:126:9)
-    at _runTestsForDescribeBlock (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:121:9)
-    at run (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:71:3)
-    at runAndTransformResultsToJestFormat (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
-    at jestAdapter (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
-    at runTestInternal (C:\Users\egoninet\Documents\Girard\node_modules\jest-runner\build\runTest.js:367:16)
-    at runTest (C:\Users\egoninet\Documents\Girard\node_modules\jest-runner\build\runTest.js:444:34)
-    at Object.worker (C:\Users\egoninet\Documents\Girard\node_modules\jest-runner\build\testWorker.js:106:12)]]></failure>
-    </testCase>
+  <file path="C:\Users\egoninet\Documents\Girard\src\components\D3PieChart.test.jsx">
   </file>
 </testExecutions>

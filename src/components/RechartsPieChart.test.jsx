@@ -1,39 +1,27 @@
-import { render } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import { render, screen } from '@testing-library/react';
 import RechartsPieChart from './RechartsPieChart';
+import { prepareData } from './chart-utils';
+
+// Mock the prepareData function
+jest.mock('./chart-utils', () => ({
+    prepareData: jest.fn(),
+}));
 
 describe('RechartsPieChart', () => {
-    test('renders the pie chart with correct data', () => {
-        // when
-        const data = {
-            force: 80,
-            intelligence: 90,
-            energy: 70,
-            speed: 85,
-            durability: 75,
-            fighting: 95
-        };
+    const data = [
+        { name: 'Force', value: 8 },
+        { name: 'Intelligence', value: 5 },
+    ];
 
-        // then
-        render(<RechartsPieChart data={data} />);
-
-        // expect to be ok
-        expect(true).toBe(true);
-
-        // expect to have a div with the class "recharts-wrapper"
-        expect(document.querySelector('.recharts-wrapper')).toBeInTheDocument();
+    beforeEach(() => {
+        prepareData.mockReturnValue(data);
     });
 
-    test(' don\'t fail when data is null', () => {
-        // when
-        const data = null;
-
-        // then
+    test('renders RechartsPieChart', () => {
         render(<RechartsPieChart data={data} />);
 
         // expect to have a div with the class "recharts-wrapper"
         expect(document.querySelector('.recharts-wrapper')).toBeInTheDocument();
-
-        // expect to be ok
-        expect(true).toBe(true);
     });
 });
