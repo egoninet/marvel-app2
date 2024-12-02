@@ -1,39 +1,36 @@
-import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import CharacterDetail from './CharacterDetail';
 
-test('renders the character detail correctly', () => {
-    const character = { 
-        name: 'Thor', description: 'God of Thunder', modified: '2014-01-13T14:48:32-0500',
-        thumbnail: { path: 'path/to/image', extension: 'jpg' },
-    };
-    render(<CharacterDetail character={character} />);
-    const nameElement = screen.getByText(character.name);
-    expect(nameElement).toBeInTheDocument();
+test('renders character details with name, description, date, and image', () => {
+  const character = {
+    name: 'Spider-Man',
+    description: 'A friendly neighborhood superhero.',
+    modified: '2023-06-15T10:30:00Z',
+    thumbnail: {
+      path: 'http://example.com/spider-man',
+      extension: 'jpg',
+    },
+  };
 
-    const descriptionElement = screen.getByText(character.description);
-    expect(descriptionElement).toBeInTheDocument();
+  render(<CharacterDetail character={character} />);
 
-    const modifiedElement = screen.getByText(character.modified);
-    expect(modifiedElement).toBeInTheDocument();
+  // Vérification du nom
+  expect(screen.getByText('Spider-Man')).toBeInTheDocument();
 
-    const imageElement = screen.getByAltText(character.name);
-    expect(imageElement).toBeInTheDocument();
-    expect(imageElement).toHaveAttribute('src', 'path/to/image/standard_large.jpg');
+  // Vérification de la description
+  expect(screen.getByText('A friendly neighborhood superhero.')).toBeInTheDocument();
+
+  // Vérification de la date formatée
+  expect(screen.getByText('15 Jun 2023')).toBeInTheDocument();
+
+  // Vérification de l'image
+  const image = screen.getByAltText('Spider-Man');
+  expect(image).toHaveAttribute('src', 'http://example.com/spider-man/standard_large.jpg');
 });
 
+test('renders "No character" when character is missing', () => {
+  render(<CharacterDetail character={null} />);
 
-test('does not render the character thumbnail image when not provided', () => {
-    const character = { 
-        name: 'Thor', description: 'God of Thunder', modified: '2014-01-13T14:48:32-0500',
-    };
-    render(<CharacterDetail character={character} />);
-    const imageElement = screen.queryByAltText(character.name);
-    expect(imageElement).not.toBeInTheDocument();
-});
-
-test('renders "no character" when character is not provided', () => {
-    render(<CharacterDetail />);
-    const noCharacterElement = screen.getByText('No character');
-    expect(noCharacterElement).toBeInTheDocument();
+  // Vérification du message par défaut
+  expect(screen.getByText('No character')).toBeInTheDocument();
 });

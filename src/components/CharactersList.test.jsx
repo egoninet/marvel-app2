@@ -1,32 +1,37 @@
-import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
-import { BrowserRouter } from 'react-router-dom';
+import { MemoryRouter } from 'react-router-dom';
 import { CharactersList } from './CharactersList';
 
-test('renders an empty list when no characters are provided', () => {
-    render(<CharactersList />, { wrapper: BrowserRouter });
-    const listElement = screen.getByRole('list');
-    expect(listElement).toBeEmptyDOMElement();
-});
+test('renders characters with names and formatted dates', () => {
+  const characters = [
+    {
+      id: '1',
+      name: 'Iron Man',
+      modified: '2024-12-01T12:00:00Z',
+    },
+    {
+      id: '2',
+      name: 'Captain America',
+      modified: '2020-04-04T19:01:59Z',
+    },
+  ];
 
-test('renders an empty list when characters is empty', () => {
-    render(<CharactersList characters={[]} />, { wrapper: BrowserRouter });
-    const listElement = screen.getByRole('list');
-    expect(listElement).toBeEmptyDOMElement();
-});
+  render(
+    <MemoryRouter>
+      <CharactersList characters={characters} />
+    </MemoryRouter>
+  );
 
-test('renders the correct number of list items when characters are provided', () => {
-    const characters = [
-        { id: '1', name: 'Thor' },
-        { id: '2', name: 'Captain America' },
-    ];
-    render(<CharactersList characters={characters} />, { wrapper: BrowserRouter });
-    const listItems = screen.getAllByRole('listitem');
-    expect(listItems).toHaveLength(characters.length);
+  // Vérification des noms
+  expect(screen.getByText('Iron Man')).toBeInTheDocument();
+  expect(screen.getByText('Captain America')).toBeInTheDocument();
 
-    characters.forEach(character => {
-        const linkElement = screen.getByText(character.name);
-        expect(linkElement).toBeInTheDocument();
-        expect(linkElement.closest('a')).toHaveAttribute('href', `/characters/${character.id}`);
-    });
+  // Vérification des dates formatées
+  expect(screen.getByText('01 Dec 2024')).toBeInTheDocument();
+  expect(screen.getByText('04 Apr 2020')).toBeInTheDocument();
+
+  // Vérification des liens
+  const links = screen.getAllByRole('link');
+  expect(links[0]).toHaveAttribute('href', '/characters/1');
+  expect(links[1]).toHaveAttribute('href', '/characters/2');
 });
