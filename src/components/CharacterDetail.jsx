@@ -31,7 +31,7 @@ function CharacterDetail({ character = {} }) {
             <strong>Description:</strong> {character.description}
           </>
         ) : (
-          " " // Ligne vide pour éviter que tout remonte
+          " "
         )}
       </p>
       <p style={{ textAlign: "left", fontWeight: "bold" }}>{formattedDate}</p>
