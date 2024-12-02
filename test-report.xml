@@ -1,5 +1,238 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="C:\Users\egoninet\Documents\Girard\e2e-tests\marvel.spec.js">
+  <file path="C:\Users\egoninet\Documents\Girard\src\components\chart-utils.test.js">
+    <testCase name="prepareData should return an empty array when no data is provided" duration="8"/>
+    <testCase name="prepareData should return the correct transformed data when all values are provided" duration="1"/>
+    <testCase name="prepareData should filter out elements with undefined values" duration="1"/>
+    <testCase name="prepareData should handle partial data correctly" duration="1"/>
+  </file>
+  <file path="C:\Users\egoninet\Documents\Girard\src\api\characters-api.test.js">
+    <testCase name="characters-api getCharacters should return the list of characters with default order" duration="20"/>
+    <testCase name="characters-api getCharacters should return the list of characters ordered by name ascending" duration="2"/>
+    <testCase name="characters-api getCharacters should return the list of characters ordered by name descending" duration="1"/>
+    <testCase name="characters-api getCharacters should return the list of characters ordered by modified field ascending" duration="1"/>
+    <testCase name="characters-api getCharacters should return the list of characters ordered by modified field descending" duration="1"/>
+    <testCase name="characters-api getCharacterById should return the character with the given id" duration="1"/>
+    <testCase name="characters-api getCharacterById should throw an error if the character with the given id is not found" duration="16"/>
+  </file>
+  <file path="C:\Users\egoninet\Documents\Girard\src\components\NumberOfCharacters.test.jsx">
+    <testCase name="NumberOfCharacters renders &quot;There is no character&quot; when no characters are provided" duration="36"/>
+    <testCase name="NumberOfCharacters renders &quot;There is no character&quot; when characters array is empty" duration="4"/>
+    <testCase name="NumberOfCharacters renders the correct number of characters when characters array is not empty" duration="7"/>
+    <testCase name="NumberOfCharacters renders &quot;There is 1 character&quot; when characters array has only one character" duration="4"/>
+  </file>
+  <file path="C:\Users\egoninet\Documents\Girard\src\pages\AboutPage.test.jsx">
+    <testCase name="AboutPage sets the document title correctly" duration="82"/>
+  </file>
+  <file path="C:\Users\egoninet\Documents\Girard\src\pages\ContactPage.test.jsx">
+    <testCase name="ContactPage sets the document title correctly" duration="85"/>
+  </file>
+  <file path="C:\Users\egoninet\Documents\Girard\src\components\D3PieChart.test.jsx">
+  </file>
+  <file path="C:\Users\egoninet\Documents\Girard\src\Layout.test.jsx">
+    <testCase name="renders the layout with correct elements" duration="128"/>
+  </file>
+  <file path="C:\Users\egoninet\Documents\Girard\src\components\CharacterDetail.test.jsx">
+    <testCase name="renders character with description and date" duration="50">
+      <failure message="TypeError: expect(...).toBeInTheDocument is not a function"><![CDATA[TypeError: expect(...).toBeInTheDocument is not a function
+    at Object.toBeInTheDocument (C:\Users\egoninet\Documents\Girard\src\components\CharacterDetail.test.jsx:15:37)
+    at Promise.then.completed (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at _runTest (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:126:9)
+    at run (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\egoninet\Documents\Girard\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\egoninet\Documents\Girard\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\egoninet\Documents\Girard\node_modules\jest-runner\build\testWorker.js:106:12)]]></failure>
+    </testCase>
+    <testCase name="renders character without description" duration="7">
+      <failure message="TypeError: expect(...).toBeInTheDocument is not a function"><![CDATA[TypeError: expect(...).toBeInTheDocument is not a function
+    at Object.toBeInTheDocument (C:\Users\egoninet\Documents\Girard\src\components\CharacterDetail.test.jsx:24:37)
+    at Promise.then.completed (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at _runTest (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:126:9)
+    at run (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\egoninet\Documents\Girard\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\egoninet\Documents\Girard\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\egoninet\Documents\Girard\node_modules\jest-runner\build\testWorker.js:106:12)]]></failure>
+    </testCase>
+    <testCase name="renders no character message" duration="3">
+      <failure message="TypeError: expect(...).toBeInTheDocument is not a function"><![CDATA[TypeError: expect(...).toBeInTheDocument is not a function
+    at Object.toBeInTheDocument (C:\Users\egoninet\Documents\Girard\src\components\CharacterDetail.test.jsx:31:44)
+    at Promise.then.completed (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at _runTest (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:126:9)
+    at run (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\egoninet\Documents\Girard\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\egoninet\Documents\Girard\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\egoninet\Documents\Girard\node_modules\jest-runner\build\testWorker.js:106:12)]]></failure>
+    </testCase>
+  </file>
+  <file path="C:\Users\egoninet\Documents\Girard\src\pages\CharacterDetailPage.test.jsx">
+  </file>
+  <file path="C:\Users\egoninet\Documents\Girard\src\components\CharactersList.test.jsx">
+    <testCase name="renders characters with names and formatted dates" duration="75">
+      <failure message="TypeError: expect(...).toBeInTheDocument is not a function"><![CDATA[TypeError: expect(...).toBeInTheDocument is not a function
+    at Object.toBeInTheDocument (C:\Users\egoninet\Documents\Girard\src\components\CharactersList.test.jsx:26:40)
+    at Promise.then.completed (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at _runTest (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:126:9)
+    at run (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\egoninet\Documents\Girard\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\egoninet\Documents\Girard\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\egoninet\Documents\Girard\node_modules\jest-runner\build\testWorker.js:106:12)]]></failure>
+    </testCase>
+  </file>
+  <file path="C:\Users\egoninet\Documents\Girard\src\pages\CharactersPage.test.jsx">
+    <testCase name="CharactersPage render CharactersPage component" duration="77">
+      <failure message="RangeError: Invalid time value"><![CDATA[RangeError: Invalid time value
+    at format (C:\Users\egoninet\Documents\Girard\node_modules\date-fns\format.cjs:359:11)
+    at C:\Users\egoninet\Documents\Girard\src\components\CharactersList.jsx:9:37
+    at Array.map (<anonymous>)
+    at map (C:\Users\egoninet\Documents\Girard\src\components\CharactersList.jsx:7:19)
+    at renderWithHooks (C:\Users\egoninet\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:15486:18)
+    at mountIndeterminateComponent (C:\Users\egoninet\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:20103:13)
+    at beginWork (C:\Users\egoninet\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:21626:16)
+    at beginWork$1 (C:\Users\egoninet\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:27465:14)
+    at performUnitOfWork (C:\Users\egoninet\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:26599:12)
+    at workLoopSync (C:\Users\egoninet\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:26505:5)
+    at renderRootSync (C:\Users\egoninet\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:26473:7)
+    at recoverFromConcurrentError (C:\Users\egoninet\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:25889:20)
+    at performConcurrentWorkOnRoot (C:\Users\egoninet\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:25789:22)
+    at flushActQueue (C:\Users\egoninet\Documents\Girard\node_modules\react\cjs\react.development.js:2667:24)
+    at act (C:\Users\egoninet\Documents\Girard\node_modules\react\cjs\react.development.js:2582:11)
+    at C:\Users\egoninet\Documents\Girard\node_modules\@testing-library\react\dist\act-compat.js:47:25
+    at renderRoot (C:\Users\egoninet\Documents\Girard\node_modules\@testing-library\react\dist\pure.js:180:26)
+    at render (C:\Users\egoninet\Documents\Girard\node_modules\@testing-library\react\dist\pure.js:271:10)
+    at Object.<anonymous> (C:\Users\egoninet\Documents\Girard\src\pages\CharactersPage.test.jsx:33:15)
+    at Promise.then.completed (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at _runTest (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\egoninet\Documents\Girard\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\egoninet\Documents\Girard\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\egoninet\Documents\Girard\node_modules\jest-runner\build\testWorker.js:106:12)]]></failure>
+    </testCase>
+    <testCase name="CharactersPage render CharactersPage component with order and orderBy from search params" duration="11">
+      <failure message="RangeError: Invalid time value"><![CDATA[RangeError: Invalid time value
+    at format (C:\Users\egoninet\Documents\Girard\node_modules\date-fns\format.cjs:359:11)
+    at C:\Users\egoninet\Documents\Girard\src\components\CharactersList.jsx:9:37
+    at Array.map (<anonymous>)
+    at map (C:\Users\egoninet\Documents\Girard\src\components\CharactersList.jsx:7:19)
+    at renderWithHooks (C:\Users\egoninet\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:15486:18)
+    at mountIndeterminateComponent (C:\Users\egoninet\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:20103:13)
+    at beginWork (C:\Users\egoninet\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:21626:16)
+    at beginWork$1 (C:\Users\egoninet\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:27465:14)
+    at performUnitOfWork (C:\Users\egoninet\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:26599:12)
+    at workLoopSync (C:\Users\egoninet\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:26505:5)
+    at renderRootSync (C:\Users\egoninet\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:26473:7)
+    at recoverFromConcurrentError (C:\Users\egoninet\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:25889:20)
+    at performConcurrentWorkOnRoot (C:\Users\egoninet\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:25789:22)
+    at flushActQueue (C:\Users\egoninet\Documents\Girard\node_modules\react\cjs\react.development.js:2667:24)
+    at act (C:\Users\egoninet\Documents\Girard\node_modules\react\cjs\react.development.js:2582:11)
+    at C:\Users\egoninet\Documents\Girard\node_modules\@testing-library\react\dist\act-compat.js:47:25
+    at renderRoot (C:\Users\egoninet\Documents\Girard\node_modules\@testing-library\react\dist\pure.js:180:26)
+    at render (C:\Users\egoninet\Documents\Girard\node_modules\@testing-library\react\dist\pure.js:271:10)
+    at _callee$ (C:\Users\egoninet\Documents\Girard\src\pages\CharactersPage.test.jsx:62:15)
+    at call (C:\Users\egoninet\Documents\Girard\src\pages\CharactersPage.test.jsx:2:1)
+    at Generator.tryCatch (C:\Users\egoninet\Documents\Girard\src\pages\CharactersPage.test.jsx:2:1)
+    at Generator._invoke [as next] (C:\Users\egoninet\Documents\Girard\src\pages\CharactersPage.test.jsx:2:1)
+    at asyncGeneratorStep (C:\Users\egoninet\Documents\Girard\src\pages\CharactersPage.test.jsx:2:1)
+    at asyncGeneratorStep (C:\Users\egoninet\Documents\Girard\src\pages\CharactersPage.test.jsx:2:1)
+    at _next (C:\Users\egoninet\Documents\Girard\src\pages\CharactersPage.test.jsx:2:1)
+    at new Promise (<anonymous>)
+    at Object.<anonymous> (C:\Users\egoninet\Documents\Girard\src\pages\CharactersPage.test.jsx:2:1)
+    at Promise.then.completed (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at _runTest (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\egoninet\Documents\Girard\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\egoninet\Documents\Girard\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\egoninet\Documents\Girard\node_modules\jest-runner\build\testWorker.js:106:12)]]></failure>
+    </testCase>
+    <testCase name="CharactersPage render CharactersPage component with order and orderBy when the select changes" duration="7">
+      <failure message="RangeError: Invalid time value"><![CDATA[RangeError: Invalid time value
+    at format (C:\Users\egoninet\Documents\Girard\node_modules\date-fns\format.cjs:359:11)
+    at C:\Users\egoninet\Documents\Girard\src\components\CharactersList.jsx:9:37
+    at Array.map (<anonymous>)
+    at map (C:\Users\egoninet\Documents\Girard\src\components\CharactersList.jsx:7:19)
+    at renderWithHooks (C:\Users\egoninet\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:15486:18)
+    at mountIndeterminateComponent (C:\Users\egoninet\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:20103:13)
+    at beginWork (C:\Users\egoninet\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:21626:16)
+    at beginWork$1 (C:\Users\egoninet\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:27465:14)
+    at performUnitOfWork (C:\Users\egoninet\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:26599:12)
+    at workLoopSync (C:\Users\egoninet\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:26505:5)
+    at renderRootSync (C:\Users\egoninet\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:26473:7)
+    at recoverFromConcurrentError (C:\Users\egoninet\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:25889:20)
+    at performConcurrentWorkOnRoot (C:\Users\egoninet\Documents\Girard\node_modules\react-dom\cjs\react-dom.development.js:25789:22)
+    at flushActQueue (C:\Users\egoninet\Documents\Girard\node_modules\react\cjs\react.development.js:2667:24)
+    at act (C:\Users\egoninet\Documents\Girard\node_modules\react\cjs\react.development.js:2582:11)
+    at C:\Users\egoninet\Documents\Girard\node_modules\@testing-library\react\dist\act-compat.js:47:25
+    at renderRoot (C:\Users\egoninet\Documents\Girard\node_modules\@testing-library\react\dist\pure.js:180:26)
+    at render (C:\Users\egoninet\Documents\Girard\node_modules\@testing-library\react\dist\pure.js:271:10)
+    at _callee2$ (C:\Users\egoninet\Documents\Girard\src\pages\CharactersPage.test.jsx:85:15)
+    at call (C:\Users\egoninet\Documents\Girard\src\pages\CharactersPage.test.jsx:2:1)
+    at Generator.tryCatch (C:\Users\egoninet\Documents\Girard\src\pages\CharactersPage.test.jsx:2:1)
+    at Generator._invoke [as next] (C:\Users\egoninet\Documents\Girard\src\pages\CharactersPage.test.jsx:2:1)
+    at asyncGeneratorStep (C:\Users\egoninet\Documents\Girard\src\pages\CharactersPage.test.jsx:2:1)
+    at asyncGeneratorStep (C:\Users\egoninet\Documents\Girard\src\pages\CharactersPage.test.jsx:2:1)
+    at _next (C:\Users\egoninet\Documents\Girard\src\pages\CharactersPage.test.jsx:2:1)
+    at new Promise (<anonymous>)
+    at Object.<anonymous> (C:\Users\egoninet\Documents\Girard\src\pages\CharactersPage.test.jsx:2:1)
+    at Promise.then.completed (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (<anonymous>)
+    at callAsyncCircusFn (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at _runTest (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\egoninet\Documents\Girard\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\egoninet\Documents\Girard\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\egoninet\Documents\Girard\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\egoninet\Documents\Girard\node_modules\jest-runner\build\testWorker.js:106:12)]]></failure>
+    </testCase>
+  </file>
+  <file path="C:\Users\egoninet\Documents\Girard\src\components\RechartsPieChart.test.jsx">
+    <testCase name="RechartsPieChart renders RechartsPieChart" duration="52"/>
   </file>
 </testExecutions>
