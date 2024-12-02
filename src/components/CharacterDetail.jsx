@@ -3,7 +3,7 @@ import { format } from "date-fns";
 function CharacterDetail({ character = {} }) {
   // Si le personnage n'est pas défini, afficher un message par défaut
   if (!character || Object.keys(character).length === 0) {
-    return <div>No character</div>;
+    return <div style={{ textAlign: "left", margin: "20px" }}>No character</div>;
   }
 
   // Formater la date de modification
@@ -12,25 +12,34 @@ function CharacterDetail({ character = {} }) {
     : "Unknown date";
 
   return (
-    <div style={{ padding: "20px", maxWidth: "600px", margin: "auto" }}>
-      <h2>{character.name}</h2>
+    <div style={{ margin: "20px", maxWidth: "800px" }}>
+      <h2 style={{ textAlign: "left" }}>{character.name}</h2>
       {/* Afficher l'image du personnage si elle existe */}
       {character.thumbnail && (
         <img
           src={`${character.thumbnail.path}/standard_large.${character.thumbnail.extension}`}
           alt={character.name}
-          style={{ width: "150px", height: "150px", borderRadius: "10px" }}
+          style={{
+            width: "150px",
+            height: "150px",
+            borderRadius: "10px",
+            float: "left",
+            marginRight: "15px",
+          }}
         />
       )}
-      {/* Description avec un texte par défaut si elle est vide */}
-      <p>
-        <strong>Description:</strong>{" "}
-        {character.description || "No description available."}
+      {/* Description : rendre une ligne vide si absente */}
+      <p style={{ textAlign: "left", clear: "both", minHeight: "20px" }}>
+        {character.description ? (
+          <>
+            <strong>Description:</strong> {character.description}
+          </>
+        ) : (
+          " " // Affiche un espace vide
+        )}
       </p>
-      {/* Date de modification formatée */}
-      <p>
-        <strong>Last modified:</strong> {formattedDate}
-      </p>
+      {/* Date formatée uniquement en gras */}
+      <p style={{ textAlign: "left", fontWeight: "bold" }}>{formattedDate}</p>
     </div>
   );
 }
