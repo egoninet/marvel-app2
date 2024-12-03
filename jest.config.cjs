@@ -1,13 +1,14 @@
 module.exports = {
   testEnvironment: "jsdom",
-  // transform js and jsx files with babel-jest
+  // Transform js and jsx files with babel-jest
   transform: {
     "^.+\\.(js|jsx)$": "babel-jest",
   },
 
-  testPathIgnorePatterns: {
+  // Ignore test paths (must be an array, not an object)
+  testPathIgnorePatterns: [
     "/e2e-tests/", 
-  },
+  ],
 
   collectCoverageFrom: [
     // Collect coverage from all js or jsx files in src folder
@@ -21,5 +22,5 @@ module.exports = {
     // Exclude routes.jsx from coverage
     "!src/routes.jsx",
   ],
-  testResultsProcessor: 'jest-sonar-reporter',
+  testResultsProcessor: "jest-sonar-reporter",
 };

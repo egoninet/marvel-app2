@@ -7,9 +7,20 @@ import CharacterDetailPage from './CharacterDetailPage';
 jest.mock('react-router', () => ({
     useLoaderData: jest.fn(),
 }));
- 
+
+// Mock d3 pour éviter les erreurs de parsing
+jest.mock('d3', () => ({
+    select: jest.fn(() => ({
+        append: jest.fn(() => ({
+            attr: jest.fn(),
+            style: jest.fn(),
+            text: jest.fn(),
+        })),
+    })),
+}));
+
 describe('CharacterDetailPage', () => {
-    const character = {
+    const baseCharacter = {
         name: 'Thor',
         description: 'God of Thunder',
         modified: '2023-10-01',
@@ -20,47 +31,85 @@ describe('CharacterDetailPage', () => {
             durability: 6,
             energy: 6,
             speed: 1,
-            fighting: 3
-        }
+            fighting: 3,
+        },
     };
 
     beforeEach(() => {
-        useLoaderData.mockReturnValue(character);
+        jest.clearAllMocks();
     });
 
-    test('render CharacterDetailPage component', () => {
+    test('renders all character details correctly', () => {
+        useLoaderData.mockReturnValue(baseCharacter);
         render(<CharacterDetailPage />);
-        expect(document.title).toBe('Thor | Marvel App');
 
-        const nameElement = screen.getByText(character.name);
-        expect(nameElement).toBeInTheDocument();
+        // Vérification du titre de la page
+        expect(document.title).toBe(`${baseCharacter.name} | Marvel App`);
 
-        const descriptionElement = screen.getByText(character.description);
-        expect(descriptionElement).toBeInTheDocument();
+        // Vérification du nom, description et date
+        expect(screen.getByText(baseCharacter.name)).toBeInTheDocument();
+        expect(screen.getByText(baseCharacter.description)).toBeInTheDocument();
+        expect(screen.getByText(baseCharacter.modified)).toBeInTheDocument();
 
-        const modifiedElement = screen.getByText(character.modified);
-        expect(modifiedElement).toBeInTheDocument();
-
-        const imageElement = screen.getByAltText(character.name);
+        // Vérification de l'image
+        const imageElement = screen.getByAltText(baseCharacter.name);
         expect(imageElement).toBeInTheDocument();
-        expect(imageElement).toHaveAttribute('src', 'path/to/image/standard_large.jpg');
+        expect(imageElement).toHaveAttribute(
+            'src',
+            `${baseCharacter.thumbnail.path}/standard_large.${baseCharacter.thumbnail.extension}`
+        );
 
-        // expect to have a heading with the text "Capacities"
-        const h2CapacitiesElement = screen.getByRole('heading', { level: 2, name: 'Capacities' });
-        expect(h2CapacitiesElement).toBeInTheDocument();
+        // Vérification des capacités
+        expect(screen.getByRole('heading', { level: 2, name: 'Capacities' })).toBeInTheDocument();
 
-        // expect to have a heading with the text "Using D3"
-        const h3D3Element = screen.getByRole('heading', { level: 3, name: 'Using D3' });
-        expect(h3D3Element).toBeInTheDocument();
-
-        // expect to have a heading with the text "Using Recharts"
-        const h3RechartsElement = screen.getByRole('heading', { level: 3, name: 'Using Recharts' });
-        expect(h3RechartsElement).toBeInTheDocument();
-
-        // expect to have a div with the id "pie-container"
+        // Vérification des sections graphiques
+        expect(screen.getByRole('heading', { level: 3, name: 'Using D3' })).toBeInTheDocument();
+        expect(screen.getByRole('heading', { level: 3, name: 'Using Recharts' })).toBeInTheDocument();
         expect(document.getElementById('pie-container')).toBeInTheDocument();
-
-        // expect to a an div with class "recharts-wrapper"
         expect(document.querySelector('.recharts-wrapper')).toBeInTheDocument();
+    });
+
+    test('renders fallback UI when description is missing', () => {
+        const characterWithoutDescription = { ...baseCharacter, description: '' };
+        useLoaderData.mockReturnValue(characterWithoutDescription);
+
+        render(<CharacterDetailPage />);
+        expect(screen.getByText('No description available.')).toBeInTheDocument();
+    });
+
+    test('renders fallback UI when thumbnail is missing', () => {
+        const characterWithoutThumbnail = { ...baseCharacter, thumbnail: null };
+        useLoaderData.mockReturnValue(characterWithoutThumbnail);
+
+        render(<CharacterDetailPage />);
+        expect(screen.queryByAltText(baseCharacter.name)).not.toBeInTheDocument();
+    });
+
+    test('renders fallback UI when capacities are missing', () => {
+        const characterWithoutCapacities = { ...baseCharacter, capacities: null };
+        useLoaderData.mockReturnValue(characterWithoutCapacities);
+
+        render(<CharacterDetailPage />);
+        expect(screen.getByText('No capacities available.')).toBeInTheDocument();
+    });
+
+    test('handles missing character gracefully', () => {
+        useLoaderData.mockReturnValue(null);
+
+        render(<CharacterDetailPage />);
+        expect(screen.getByText('Character not found')).toBeInTheDocument();
+    });
+
+    test('handles minimal character data gracefully', () => {
+        const minimalCharacter = { name: 'Loki', modified: '2023-10-01' };
+        useLoaderData.mockReturnValue(minimalCharacter);
+
+        render(<CharacterDetailPage />);
+
+        // Vérification des données minimales
+        expect(screen.getByText('Loki')).toBeInTheDocument();
+        expect(screen.getByText('2023-10-01')).toBeInTheDocument();
+        expect(screen.queryByText('No description available.')).toBeInTheDocument();
+        expect(screen.queryByText('No capacities available.')).toBeInTheDocument();
     });
 });
